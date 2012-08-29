@@ -8,13 +8,13 @@
   197 about_strings.rb
   100 about_symbols.rb
   159 about_regular_expressions.rb
-
   150 about_methods.rb
+
+   87 about_constants.rb
 
    96 about_blocks.rb
   190 about_classes.rb
   170 about_class_methods.rb
-   87 about_constants.rb
   116 about_control_statements.rb
    63 about_dice_project.rb
    68 about_exceptions.rb
