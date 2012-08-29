@@ -7,8 +7,9 @@
    66 about_hashes.rb
   197 about_strings.rb
   100 about_symbols.rb
-
   159 about_regular_expressions.rb
+
+  150 about_methods.rb
 
    96 about_blocks.rb
   190 about_classes.rb
@@ -22,7 +23,6 @@
   103 about_iteration.rb
   137 about_java_interop.rb
   178 about_message_passing.rb
-  150 about_methods.rb
    63 about_modules.rb
    45 about_open_classes.rb
   154 about_proxy_object_project.rb
