@@ -11,8 +11,9 @@
   150 about_methods.rb
    87 about_constants.rb
   116 about_control_statements.rb
-
    33 about_true_and_false.rb
+
+   25 about_triangle_project.rb
 
    96 about_blocks.rb
   190 about_classes.rb
@@ -32,5 +33,4 @@
    74 about_scoring_project.rb
    54 about_to_str.rb
    16 about_triangle_project_2.rb
-   25 about_triangle_project.rb
  2892 total
