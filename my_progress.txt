@@ -12,14 +12,14 @@
    87 about_constants.rb
   116 about_control_statements.rb
    33 about_true_and_false.rb
-
    25 about_triangle_project.rb
+
+   68 about_exceptions.rb
 
    96 about_blocks.rb
   190 about_classes.rb
   170 about_class_methods.rb
    63 about_dice_project.rb
-   68 about_exceptions.rb
     8 about_extra_credit.rb
    85 about_inheritance.rb
   103 about_iteration.rb
