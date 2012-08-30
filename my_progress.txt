@@ -14,8 +14,9 @@
    33 about_true_and_false.rb
    25 about_triangle_project.rb
    68 about_exceptions.rb
-
    16 about_triangle_project_2.rb
+
+  103 about_iteration.rb
 
    96 about_blocks.rb
   190 about_classes.rb
@@ -23,7 +24,6 @@
    63 about_dice_project.rb
     8 about_extra_credit.rb
    85 about_inheritance.rb
-  103 about_iteration.rb
   137 about_java_interop.rb
   178 about_message_passing.rb
    63 about_modules.rb
