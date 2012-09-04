@@ -4,6 +4,12 @@ require File.expand_path(File.dirname(__FILE__) + '/edgecase')
 # points.  The following "score" function will be used calculate the
 # score of a single roll of the dice.
 #
+# ASSUMPTIONS:
+#   -- Dice is six sided with sides 1,2,3,4,5,6.
+#   -- a greed roll can have any number of rolls.
+#   -- In a greed roll of more than 3 individual rolls, the 'sets of three' noted
+#      are mutually exclusive.  A greed roll of [1,1,1,1] == 1100 not 2000.
+ 
 # A greed roll is scored as follows:
 #
 # * A set of three ones is 1000 points
@@ -30,7 +36,62 @@ require File.expand_path(File.dirname(__FILE__) + '/edgecase')
 # Your goal is to write the score method.
 
 def score(dice)
-  # You need to write this method
+  # First score dice array based on length.
+  case dice.length
+  when 0
+    return 0
+  when 1,2
+    return score_short_roll(dice)
+  else
+    return score_long_roll(dice)
+  end
+end
+
+def score_short_roll(dice)
+  dice.inject(0) { |score, die| score += score_one_roll(die) }
+end 
+
+def score_one_roll(die)
+    score = 0
+    case die
+    when 1
+      score = 100
+    when 5
+      score = 50
+    end
+    score
+end
+
+def score_long_roll(dice)
+  score_sides_seen(get_sides_seen(dice))
+end
+
+def get_sides_seen(dice)
+  sides_seen = [0,0,0,0,0,0] 
+  dice.each do |die|
+    sides_seen[die-1] += 1    
+  end
+  sides_seen
+end
+
+def score_sides_seen(sides_seen)
+  score = 0
+  sides_seen.each_with_index do |rolls, index| 
+    side = index + 1
+    if rolls > 0
+      if rolls >= 3 
+        if side == 1
+          score += 1000
+        else
+          score += side * 100 * (rolls / 3).floor
+        end
+      end 
+      (rolls % 3).times do |roll|
+        score += score_one_roll(side)
+      end
+    end
+  end
+  score
 end
 
 class AboutScoringProject < EdgeCase::Koan
