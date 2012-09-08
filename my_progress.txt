@@ -24,10 +24,10 @@
    63 about_dice_project.rb
    85 about_inheritance.rb
    63 about_modules.rb
-
    79 about_scope.rb
 
   170 about_class_methods.rb
+
   178 about_message_passing.rb
   154 about_proxy_object_project.rb
    54 about_to_str.rb
