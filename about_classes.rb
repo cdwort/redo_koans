@@ -165,7 +165,6 @@ class AboutClasses < EdgeCase::Koan
 
   def test_to_s_provides_a_string_version_of_the_object
     fido = Dog7.new("Fido")
-    puts fido.to_s
     assert_equal "Fido as String", fido.to_s
   end
 
