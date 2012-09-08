@@ -2,9 +2,21 @@ require File.expand_path(File.dirname(__FILE__) + '/edgecase')
 
 # Implement a DiceSet Class here:
 #
-# class DiceSet
-#   code ...
-# end
+class DiceSet
+  attr_reader :values
+
+  def initialize
+    @values = Array.new
+  end
+
+  def roll(num_rolls)
+    @values = Array.new
+    num_rolls.times do 
+      @values << 1 + rand(6)
+    end
+  end
+
+end
 
 class AboutDiceProject < EdgeCase::Koan
   def test_can_create_a_dice_set
@@ -43,7 +55,7 @@ class AboutDiceProject < EdgeCase::Koan
     assert_not_equal first_time, second_time,
       "Two rolls should not be equal"
 
-    # THINK ABOUT IT:
+    # THINK ABOUT IT:@#$
     #
     # If the rolls are random, then it is possible (although not
     # likely) that two consecutive rolls are equal.  What would be a
