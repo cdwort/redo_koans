@@ -28,9 +28,9 @@
   170 about_class_methods.rb
   178 about_message_passing.rb
   154 about_proxy_object_project.rb
-
    54 about_to_str.rb
 
-  137 about_java_interop.rb
     8 about_extra_credit.rb
+
+  137 about_java_interop.rb
  2892 total
