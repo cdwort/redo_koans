@@ -43,14 +43,11 @@ class Proxy
   protected
 
   def update_call_counter(meth)
-    puts meth.to_s + " called."
-    puts "Updating call counter: " + @call_counter.inspect
     if @call_counter[meth.to_sym].nil?
       @call_counter[meth.to_sym] = 1
     else
       @call_counter[meth.to_sym] += 1
     end 
-    puts "Done. " + @call_counter.inspect
   end
 
 end
