@@ -1,4 +1,5 @@
 require File.expand_path(File.dirname(__FILE__) + '/edgecase')
+require File.expand_path(File.dirname(__FILE__) + '/proxy.rb')
 
 # Project: Create a Proxy Class
 #
@@ -12,6 +13,7 @@ require File.expand_path(File.dirname(__FILE__) + '/edgecase')
 # missing handler and any other supporting methods.  The specification
 # of the Proxy class is given in the AboutProxyObjectProject koan.
 
+=begin
 class Proxy
   def initialize(target_object)
     @object = target_object
@@ -20,12 +22,15 @@ class Proxy
 
   # WRITE CODE HERE
 end
+=end
 
 # The proxy object should pass the following Koan:
 #
 class AboutProxyObjectProject < EdgeCase::Koan
   def test_proxy_method_returns_wrapped_object
     # NOTE: The Television class is defined below
+    # Television.new is instantiated before the Proxy.new call, so what 
+    # we're passing here is an object.
     tv = Proxy.new(Television.new)
     
     assert tv.instance_of?(Proxy)
